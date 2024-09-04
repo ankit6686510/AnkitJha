@@ -12,6 +12,9 @@ body {
     background: #080808;
     color: #fff;
 }
+#element {
+    color: #ff004f;
+}
 
 #header {
     width: 100%;
@@ -34,6 +37,7 @@ nav {
 
 .logo {
     width: 140px;
+    
 }
 
 nav ul {
@@ -54,6 +58,7 @@ nav ul li a {
     position: relative;
     transition: color 0.3s; /* Corrected the comment syntax */
 }
+
 
 nav ul li a::after {
     content: '';

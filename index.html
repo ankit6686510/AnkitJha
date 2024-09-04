@@ -11,7 +11,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="logo.png" class="logo" alt="Logo">
+                <img src="logo-color__1_-removebg-preview.png" class="logo" alt="Logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -23,8 +23,9 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I'm <span>Ankit</span><br>From India</h1>
+                <p>Welcome!!</p>
+                <h1>Hi, I'm <span>Ankit</span><br>and I am a</h1>
+                <span id="element"></span>
             </div>
         </div>
     </div>
@@ -34,7 +35,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="user.png" alt="User">
+                    <img src="ankit jha.jpg" alt="User">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -205,6 +206,13 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Technical Analyst'],
+      typeSpeed: 100,
+    });
   </script>
 </body>
 </html>
