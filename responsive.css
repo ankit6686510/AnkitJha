@@ -1,0 +1,178 @@
+/* Responsive.css - Fixes for display issues at different zoom levels */
+
+/* Default styles for all screen sizes */
+#header {
+    min-height: 100vh;
+    height: auto !important;
+    padding-bottom: 50px;
+}
+
+.header-text {
+    margin-top: 100px !important;
+}
+
+.header-text h1 {
+    font-size: 3.2rem !important;
+}
+
+.header-text span#element {
+    min-height: 60px;
+    margin-bottom: 20px;
+}
+
+.header-buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.header-buttons .btn {
+    flex: 1 1 auto;
+    min-width: 180px;
+    max-width: 300px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header-text h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+    }
+    
+    .header-buttons .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .social-quick-links {
+        justify-content: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .header-buttons {
+        justify-content: center;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .header-text {
+        margin-top: 80px !important;
+    }
+    
+    .header-buttons {
+        justify-content: flex-start;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .header-text {
+        margin-top: 120px !important;
+        max-width: 750px;
+    }
+    
+    .header-buttons {
+        flex-direction: row;
+    }
+}
+
+/* Fix for work section */
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+@media only screen and (min-width: 992px) {
+    .work-list .work:first-child {
+        grid-column: span 2;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .work-list .work:first-child {
+        grid-column: span 1;
+    }
+    
+    .work-list .work:first-child img {
+        height: 250px;
+    }
+}
+
+/* Fix for scroll-down visibility */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Ensure navbar is visible */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    position: relative;
+    z-index: 100;
+}
+
+/* Ensure the particles background doesn't hide content */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Fix for challenge cards section */
+.challenges-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .challenges-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fix for blog section */
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-post {
+        margin-bottom: 40px;
+    }
+} 
