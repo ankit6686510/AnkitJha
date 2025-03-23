@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Test</title>
+</head>
+<body>
+    <h1>JSON Test</h1>
+    <div id="blogs">Loading blogs...</div>
+    <div id="challenges">Loading challenges...</div>
+
+    <script>
+        // Test blogs.json
+        fetch('data/blogs.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('blogs').textContent = `Successfully loaded blogs.json with ${data.length} entries`;
+            })
+            .catch(error => {
+                document.getElementById('blogs').textContent = `Error loading blogs.json: ${error.message}`;
+            });
+
+        // Test challenges.json
+        fetch('data/challenges.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('challenges').textContent = `Successfully loaded challenges.json with ${data.length} entries`;
+            })
+            .catch(error => {
+                document.getElementById('challenges').textContent = `Error loading challenges.json: ${error.message}`;
+            });
+    </script>
+</body>
+</html> 
