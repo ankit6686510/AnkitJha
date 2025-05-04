@@ -34,6 +34,223 @@
     margin-bottom: 10px;
 }
 
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 10px 5%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header-text h1 {
+        font-size: 3rem;
+    }
+
+    .header-text p {
+        font-size: 1.1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-left {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    .sub-title {
+        font-size: 2rem;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .work img {
+        height: 250px;
+    }
+
+    .layer h3 {
+        font-size: 1.5rem;
+    }
+
+    .layer p {
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 0.9rem;
+    }
+
+    .sub-title {
+        font-size: 1.8rem;
+    }
+
+    .tab-links {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+
+    .work img {
+        height: 200px;
+    }
+
+    .layer {
+        padding: 20px;
+    }
+
+    .layer h3 {
+        font-size: 1.3rem;
+    }
+
+    .layer p {
+        font-size: 0.9rem;
+    }
+
+    .layer a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .btn,
+    .btn.btn2 {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    form input,
+    form textarea {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-text p {
+        font-size: 0.8rem;
+    }
+
+    .sub-title {
+        font-size: 1.5rem;
+    }
+
+    .tab-links {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .services-list div {
+        padding: 30px;
+    }
+
+    .services-list div h2 {
+        font-size: 1.5rem;
+    }
+
+    .services-list div p {
+        font-size: 1rem;
+    }
+
+    .work img {
+        height: 180px;
+    }
+
+    .layer {
+        padding: 15px;
+    }
+
+    .layer h3 {
+        font-size: 1.2rem;
+    }
+
+    .layer p {
+        font-size: 0.8rem;
+    }
+
+    .layer a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .btn,
+    .btn.btn2 {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .header-text h1 {
