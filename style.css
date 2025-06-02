@@ -884,42 +884,19 @@ body:not(.dark-mode) #portfolio {
 
 .work {
     position: relative;
-    border-radius: 12px;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.work::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(var(--primary-color-rgb), 0.7));
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.5s ease;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .work img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     display: block;
-    transition: transform 0.8s ease;
-}
-
-.work:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-.work:hover::before {
-    opacity: 1;
-}
-
-.work:hover img {
-    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 
 .work .layer {
@@ -938,17 +915,22 @@ body:not(.dark-mode) #portfolio {
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
+    z-index: 2;
 }
 
 .work .layer h3 {
     font-weight: 500;
     margin-bottom: 20px;
     color: #fff;
+    transform: translateY(20px);
+    transition: transform 0.5s;
 }
 
 .work .layer p {
     color: #fff;
     margin-bottom: 20px;
+    transform: translateY(20px);
+    transition: transform 0.5s;
 }
 
 .work .layer .project-link {
@@ -965,11 +947,21 @@ body:not(.dark-mode) #portfolio {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
 }
 
 .work .layer .project-link:hover {
     background: var(--primary-color);
     color: #fff;
+    transform: scale(1.1);
+}
+
+.work:hover {
+    transform: translateY(-10px);
+}
+
+.work:hover img {
     transform: scale(1.1);
 }
 
@@ -979,13 +971,28 @@ body:not(.dark-mode) #portfolio {
 
 .work:hover .layer h3,
 .work:hover .layer p {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
 }
 
 .work:hover .layer .project-link {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.work:hover .layer h3,
+.work:hover .layer p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.work:hover .layer .project-link {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Make first work (Karm) larger */
