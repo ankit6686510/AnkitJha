@@ -922,7 +922,7 @@ body:not(.dark-mode) #portfolio {
     transform: scale(1.1);
 }
 
-.layer {
+.work .layer {
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.6), var(--primary-color));
@@ -940,22 +940,18 @@ body:not(.dark-mode) #portfolio {
     transition: height 0.5s;
 }
 
-.layer h3 {
+.work .layer h3 {
     font-weight: 500;
     margin-bottom: 20px;
     color: #fff;
-    font-size: 1.5rem;
 }
 
-.layer p {
+.work .layer p {
     color: #fff;
-    font-size: 1rem;
-    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.layer a {
-    margin-top: 20px;
+.work .layer .project-link {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -965,10 +961,13 @@ body:not(.dark-mode) #portfolio {
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
-.layer a:hover {
+.work .layer .project-link:hover {
     background: var(--primary-color);
     color: #fff;
     transform: scale(1.1);
@@ -984,7 +983,7 @@ body:not(.dark-mode) #portfolio {
     transform: translateY(0);
 }
 
-.work:hover .layer a {
+.work:hover .layer .project-link {
     opacity: 1;
     transform: translateY(0);
 }
