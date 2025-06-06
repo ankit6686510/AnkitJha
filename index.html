@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
@@ -7,7 +8,8 @@
     <link rel="icon" href="favicon.svg.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <script src="https://kit.fontawesome.com/ef633b37d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
@@ -15,46 +17,46 @@
         body:not(.dark-mode) #challenges {
             background-color: #f8f9fa !important;
         }
-        
+
         body:not(.dark-mode) .challenge-card {
             background: #fff;
             color: #333;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         body:not(.dark-mode) .challenge-card h3 {
             color: #333;
         }
-        
+
         body:not(.dark-mode) .challenge-card p {
             color: #666;
         }
-        
+
         body:not(.dark-mode) .challenge-date {
             color: #888;
         }
-        
+
         body:not(.dark-mode) #challenges .section-desc {
             color: #555;
         }
-        
+
         body:not(.dark-mode) #challenges .sub-title {
             color: #333;
         }
-        
+
         body:not(.dark-mode) .challenges-filter .filter-btn {
             background-color: rgba(0, 0, 0, 0.05);
             color: #555;
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
-        
+
         body:not(.dark-mode) .challenges-filter .filter-btn.active,
         body:not(.dark-mode) .challenges-filter .filter-btn:hover {
             background-color: var(--primary-color);
             color: #fff;
             border-color: var(--primary-color);
         }
-        
+
         /* Fix for header content disappearing at 100% zoom */
         @media (min-height: 600px) and (max-height: 900px) {
             #header {
@@ -62,27 +64,27 @@
                 height: auto;
                 padding-bottom: 50px;
             }
-            
+
             .header-text {
                 margin-top: 120px;
             }
-            
+
             .scroll-down {
                 bottom: 20px;
             }
-            
+
             .header-buttons {
                 flex-wrap: wrap;
             }
-            
+
             .header-buttons .btn {
                 margin-bottom: 10px;
             }
-            
+
             .header-text h1 {
                 font-size: 2.8rem;
             }
-            
+
             .header-text span#element {
                 min-height: 50px;
                 margin-bottom: 10px;
@@ -90,6 +92,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="header">
         <div id="particles-js"></div>
@@ -110,24 +113,28 @@
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <div class="nav-icons">
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
                     <i class="fas fa-moon" id="theme-toggle" onclick="toggleDarkMode()"></i>
                 </div>
             </nav>
             <div class="header-text">
                 <div class="header-top" data-aos="fade-up" data-aos-delay="100">
-                <p>Welcome!!</p>
+                    <p>Welcome!!</p>
                 </div>
                 <h1 data-aos="fade-up" data-aos-delay="200">Hii, I'm <span>Ankit</span><br> & I am a</h1>
                 <span id="element" data-aos="fade-up" data-aos-delay="300"></span>
                 <div class="header-buttons" data-aos="fade-up" data-aos-delay="400">
                     <a href="#contact" class="btn">Contact Me <i class="fas fa-paper-plane"></i></a>
                     <a href="#portfolio" class="btn btn-outline">View Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="Ankit resume.pdf download class="btn"><i class="fas fa-file-download"></i> Download Resume</a>
+                    <a href="#ankit resume.pdf" class="btn btn-outline">View resume <i class="fas fa-arrow-right"></i></a>
+                    <!-- <a href="Ankit resume.pdf download class=" btn"><i class="fas fa-file-download"></i> Download
+                        Resume</a> -->
                 </div>
                 <div class="social-quick-links" data-aos="fade-up" data-aos-delay="500">
-                    <a href="https://github.com/ankit6686510" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/ankitkumarjha/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ankit6686510" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ankitkumarjha/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -150,14 +157,24 @@
                 <div class="about-col-2" data-aos="fade-left">
                     <h1 class="sub-title">About Me <span class="accent-dot"></span></h1>
                     <div class="about-content">
-                        <p><i class="fas fa-quote-left quote-icon"></i> Hi there! I'm currently pursuing my Bachelor of Technology degree from GGSIPU, and I am absolutely passionate about the world of software development, web development, and blockchain technology.
-                            <br><br>It has always fascinated me how a few lines of code can transform into a functional program that can make people's lives easier and more convenient.
-                            I have always had an innate curiosity for how technology works and how it can be used to solve real-world problems. This curiosity has led me down the path of software development, and I am thrilled to be learning and growing in this field.<i class="fas fa-quote-right quote-icon"></i></p>
+                        <p><i class="fas fa-quote-left quote-icon"></i> Hi there! I'm currently pursuing my Bachelor of
+                            Technology degree from GGSIPU, and I am absolutely passionate about the world of software
+                            development, web development, and blockchain technology.
+                            <br><br>It has always fascinated me how a few lines of code can transform into a functional
+                            program that can make people's lives easier and more convenient.
+                            I have always had an innate curiosity for how technology works and how it can be used to
+                            solve real-world problems. This curiosity has led me down the path of software development,
+                            and I am thrilled to be learning and growing in this field.<i
+                                class="fas fa-quote-right quote-icon"></i>
+                        </p>
                     </div>
                     <div class="tab-title">
-                        <p class="tab-links active-link" onclick="opentab('skills')"><i class="fas fa-laptop-code"></i> Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')"><i class="fas fa-briefcase"></i> Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')"><i class="fas fa-graduation-cap"></i> Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')"><i class="fas fa-laptop-code"></i>
+                            Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')"><i class="fas fa-briefcase"></i> Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('Education')"><i class="fas fa-graduation-cap"></i>
+                            Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -177,7 +194,9 @@
                                         <div class="skill-percent">85%</div>
                                     </div>
                                 </div>
-                                <p>Developing Web-Apps using HTML, CSS, Javascript, <a href="https://reactjs.org/" target="_blank">React.js</a>, Bootstrap/Tailwind CSS, TypeScript, Node.js, Express.js</p>
+                                <p>Developing Web-Apps using HTML, CSS, Javascript, <a href="https://reactjs.org/"
+                                        target="_blank">React.js</a>, Bootstrap/Tailwind CSS, TypeScript, Node.js,
+                                    Express.js</p>
                             </li>
                             <li>
                                 <span>Database:</span>
@@ -212,15 +231,18 @@
                         <ul>
                             <li>
                                 <span><i class="fas fa-calendar-alt"></i> 2021</span>
-                                <p>It was a depressing phase of my life & at that time I focused on working on myself and building resilience through personal development.</p>
+                                <p>It was a depressing phase of my life & at that time I focused on working on myself
+                                    and building resilience through personal development.</p>
                             </li>
                             <li>
                                 <span><i class="fas fa-calendar-alt"></i> 2022</span>
-                                <p>Self-taught React.js and Redux, building several personal projects to strengthen my front-end development skills.</p>
+                                <p>Self-taught React.js and Redux, building several personal projects to strengthen my
+                                    front-end development skills.</p>
                             </li>
                             <li>
                                 <span><i class="fas fa-calendar-alt"></i> 2024</span>
-                                <p>Secured internship position at D-Link, working on real-world networking and software development projects.</p>
+                                <p>Secured internship position at D-Link, working on real-world networking and software
+                                    development projects.</p>
                             </li>
                         </ul>
                     </div>
@@ -232,11 +254,14 @@
                             </li>
                             <li>
                                 <span><i class="fas fa-graduation-cap"></i> 2021</span>
-                                <p>Completed Higher Secondary education with focus on computer science and technology.</p>
+                                <p>Completed Higher Secondary education with focus on computer science and technology.
+                                </p>
                             </li>
                             <li>
                                 <span><i class="fas fa-graduation-cap"></i> 2022 - Present</span>
-                                <p>Joined GGSIPU for B.Tech program, initially in Artificial Intelligence and Data Science (AIDS), later transferred to Electrical and Electronics Engineering (EEE).</p>
+                                <p>Joined GGSIPU for B.Tech program, initially in Artificial Intelligence and Data
+                                    Science (AIDS), later transferred to Electrical and Electronics Engineering (EEE).
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -251,21 +276,25 @@
             <h1 class="sub-title" data-aos="fade-up">My Services</h1>
             <div class="services-list">
                 <div data-aos="fade-up" data-aos-delay="100">
-                    <i class="fa-solid fa-code"></i>  
+                    <i class="fa-solid fa-code"></i>
                     <h2>Frontend Development</h2>
                     <p>Crafting visually stunning and responsive web interfaces using modern front-end technologies.</p>
-                    <a href="https://github.com/ankit6686510/Namste-React" target="_blank" rel="noopener noreferrer">Learn more <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/ankit6686510/Namste-React" target="_blank"
+                        rel="noopener noreferrer">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
-                    <i class="fa-solid fa-crop-simple"></i> 
+                    <i class="fa-solid fa-crop-simple"></i>
                     <h2>Backend Development</h2>
-                    <p>Building robust server-side applications with efficient database management and secure API endpoints.</p>
-                    <a href="https://github.com/ankit6686510/Backend-DEV/tree/main" target="_blank" rel="noopener noreferrer">Learn more <i class="fas fa-arrow-right"></i></a>
+                    <p>Building robust server-side applications with efficient database management and secure API
+                        endpoints.</p>
+                    <a href="https://github.com/ankit6686510/Backend-DEV/tree/main" target="_blank"
+                        rel="noopener noreferrer">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-brands fa-app-store-ios"></i>
                     <h2>API Integration</h2>
-                    <p>Seamlessly connecting different services and applications to ensure smooth data flow and enhance functionality.</p>
+                    <p>Seamlessly connecting different services and applications to ensure smooth data flow and enhance
+                        functionality.</p>
                     <a href="#">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -288,10 +317,13 @@
                     <img src="karm.jpg" alt="Karm Platform">
                     <div class="layer">
                         <h3>Karm Platform</h3>
-                        <p>A comprehensive job and internship platform connecting talented individuals with opportunities.</p>
+                        <p>A comprehensive job and internship platform connecting talented individuals with
+                            opportunities.</p>
                         <div class="project-links">
-                            <a href="https://thekarm.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                            <a href="https://github.com/ankit6686510/Karm" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://thekarm.onrender.com/" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                            <a href="https://github.com/ankit6686510/Karm" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fab fa-github"></i> Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -301,8 +333,10 @@
                         <h3>Zaika Food Website</h3>
                         <p>A modern food ordering platform with a beautiful UI and seamless user experience.</p>
                         <div class="project-links">
-                            <a href="https://zaikaafood.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                            <a href="https://github.com/ankit6686510/Zaika" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://zaikaafood.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                            <a href="https://github.com/ankit6686510/Zaika" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fab fa-github"></i> Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -312,8 +346,11 @@
                         <h3>BudMatching Platform</h3>
                         <p>A comprehensive platform for finding your lost earbuds with advanced features.</p>
                         <div class="project-links">
-                            <a href="https://budmatching.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                            <a href="https://github.com/ankit6686510/BudMatching" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://budmatching.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                            <a href="https://github.com/ankit6686510/BudMatching" target="_blank"
+                                rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source
+                                Code</a>
                         </div>
                     </div>
                 </div>
@@ -321,10 +358,14 @@
                     <img src="xenocrm.png" alt="Xeno CRM Platform">
                     <div class="layer">
                         <h3>Xeno CRM Platform</h3>
-                        <p>A powerful CRM platform built for Branch, featuring advanced customer relationship management tools.</p>
+                        <p>A powerful CRM platform built for Branch, featuring advanced customer relationship management
+                            tools.</p>
                         <div class="project-links">
-                            <a href="https://xeno-crm.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                            <a href="https://github.com/ankit6686510/xeno-assignment" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://xeno-crm.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                            <a href="https://github.com/ankit6686510/xeno-assignment" target="_blank"
+                                rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source
+                                Code</a>
                         </div>
                     </div>
                 </div>
@@ -372,7 +413,8 @@
             <h1 class="sub-title" data-aos="fade-up">Testimonials</h1>
             <div class="testimonial-list">
                 <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
-                    <p>"Ankit is a fantastic developer! He delivered the project on time and exceeded our expectations."</p>
+                    <p>"Ankit is a fantastic developer! He delivered the project on time and exceeded our expectations."
+                    </p>
                     <div class="testimonial-info">
                         <div class="testimonial-img">
                             <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Client">
@@ -403,8 +445,9 @@
     <div id="blog">
         <div class="container">
             <h1 class="sub-title" data-aos="fade-up">Blog</h1>
-            <p class="section-desc" data-aos="fade-up">Check out my latest thoughts and tutorials on web development.</p>
-            
+            <p class="section-desc" data-aos="fade-up">Check out my latest thoughts and tutorials on web development.
+            </p>
+
             <div class="blog-list">
                 <!-- Static blog posts -->
                 <div class="blog-post" data-aos="fade-up" data-aos-delay="100">
@@ -414,8 +457,11 @@
                     </div>
                     <h2>Understanding JavaScript Closures</h2>
                     <div class="blog-content">
-                        <p>Closures are one of the most powerful features of JavaScript but they can also be one of the most confusing. In this post, I'll break down what closures are and how to use them effectively.</p>
-                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1000" alt="JavaScript Closures" class="blog-image">
+                        <p>Closures are one of the most powerful features of JavaScript but they can also be one of the
+                            most confusing. In this post, I'll break down what closures are and how to use them
+                            effectively.</p>
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1000"
+                            alt="JavaScript Closures" class="blog-image">
                     </div>
                     <div class="blog-post-footer">
                         <div class="blog-post-meta">
@@ -436,8 +482,11 @@
                     </div>
                     <h2>Getting Started with React</h2>
                     <div class="blog-content">
-                        <p>React is a popular JavaScript library for building user interfaces, particularly single-page applications. In this post, I'll walk you through setting up a basic React application and explain some core concepts.</p>
-                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=1000" alt="React" class="blog-image">
+                        <p>React is a popular JavaScript library for building user interfaces, particularly single-page
+                            applications. In this post, I'll walk you through setting up a basic React application and
+                            explain some core concepts.</p>
+                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=1000" alt="React"
+                            class="blog-image">
                     </div>
                     <div class="blog-post-footer">
                         <div class="blog-post-meta">
@@ -458,8 +507,11 @@
                     </div>
                     <h2>CSS Grid vs Flexbox: When to Use Each</h2>
                     <div class="blog-content">
-                        <p>CSS layout has evolved significantly over the years. Two of the most powerful tools for creating layouts are CSS Grid and Flexbox. But when should you use one over the other? In this post, I'll break down the differences.</p>
-                        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1000" alt="CSS Grid vs Flexbox" class="blog-image">
+                        <p>CSS layout has evolved significantly over the years. Two of the most powerful tools for
+                            creating layouts are CSS Grid and Flexbox. But when should you use one over the other? In
+                            this post, I'll break down the differences.</p>
+                        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1000"
+                            alt="CSS Grid vs Flexbox" class="blog-image">
                     </div>
                     <div class="blog-post-footer">
                         <div class="blog-post-meta">
@@ -480,15 +532,16 @@
     <div id="challenges">
         <div class="container">
             <h1 class="sub-title" data-aos="fade-up">Coding Challenges</h1>
-            <p class="section-desc" data-aos="fade-up">Solutions to algorithmic problems from platforms like LeetCode, HackerRank, and more.</p>
-            
+            <p class="section-desc" data-aos="fade-up">Solutions to algorithmic problems from platforms like LeetCode,
+                HackerRank, and more.</p>
+
             <div class="challenges-filter" data-aos="fade-up">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="leetcode">LeetCode</button>
                 <button class="filter-btn" data-filter="hackerrank">HackerRank</button>
                 <button class="filter-btn" data-filter="codechef">CodeChef</button>
             </div>
-            
+
             <div class="challenges-list">
                 <!-- Static challenges -->
                 <div class="challenge-card" data-aos="fade-up" data-aos-delay="100" data-platform="leetcode">
@@ -497,14 +550,17 @@
                         <span class="challenge-difficulty easy">Easy</span>
                     </div>
                     <h3>Two Sum</h3>
-                    <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution.</p>
+                    <p>Given an array of integers nums and an integer target, return indices of the two numbers such
+                        that they add up to target. You may assume that each input would have exactly one solution.</p>
                     <div class="challenge-tags">
                         <span class="tag">Array</span>
                         <span class="tag">Hash Table</span>
                     </div>
                     <div class="challenge-links">
-                        <a href="https://leetcode.com/problems/two-sum/" target="_blank" class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/leetcode-solutions/two-sum" target="_blank" class="solution-link">View Solution <i class="fas fa-code"></i></a>
+                        <a href="https://leetcode.com/problems/two-sum/" target="_blank" class="problem-link">View
+                            Problem <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/ankit6686510/leetcode-solutions/two-sum" target="_blank"
+                            class="solution-link">View Solution <i class="fas fa-code"></i></a>
                     </div>
                     <div class="challenge-date">May 10, 2025</div>
                 </div>
@@ -521,8 +577,10 @@
                         <span class="tag">Math</span>
                     </div>
                     <div class="challenge-links">
-                        <a href="https://www.hackerrank.com/challenges/diagonal-difference/problem" target="_blank" class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/hackerrank-solutions/diagonal-difference" target="_blank" class="solution-link">View Solution <i class="fas fa-code"></i></a>
+                        <a href="https://www.hackerrank.com/challenges/diagonal-difference/problem" target="_blank"
+                            class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/ankit6686510/hackerrank-solutions/diagonal-difference"
+                            target="_blank" class="solution-link">View Solution <i class="fas fa-code"></i></a>
                     </div>
                     <div class="challenge-date">March 28, 2025</div>
                 </div>
@@ -533,14 +591,18 @@
                         <span class="challenge-difficulty easy">Easy</span>
                     </div>
                     <h3>Chef and Operators</h3>
-                    <p>Chef has just started programming, he is in first grade of programming school. Chef is reading about relational operators in his class, he wants to help Chef solve programming problems by finding relational operators that will satisfy given equations.</p>
+                    <p>Chef has just started programming, he is in first grade of programming school. Chef is reading
+                        about relational operators in his class, he wants to help Chef solve programming problems by
+                        finding relational operators that will satisfy given equations.</p>
                     <div class="challenge-tags">
                         <span class="tag">Basic Programming</span>
                         <span class="tag">Operators</span>
                     </div>
                     <div class="challenge-links">
-                        <a href="https://www.codechef.com/problems/CHOPRT" target="_blank" class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/codechef-solutions/chef-and-operators" target="_blank" class="solution-link">View Solution <i class="fas fa-code"></i></a>
+                        <a href="https://www.codechef.com/problems/CHOPRT" target="_blank" class="problem-link">View
+                            Problem <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/ankit6686510/codechef-solutions/chef-and-operators" target="_blank"
+                            class="solution-link">View Solution <i class="fas fa-code"></i></a>
                     </div>
                     <div class="challenge-date">March 12, 2024</div>
                 </div>
@@ -551,15 +613,19 @@
                         <span class="challenge-difficulty medium">Medium</span>
                     </div>
                     <h3>Add Two Numbers</h3>
-                    <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.</p>
+                    <p>You are given two non-empty linked lists representing two non-negative integers. The digits are
+                        stored in reverse order, and each of their nodes contains a single digit. Add the two numbers
+                        and return the sum as a linked list.</p>
                     <div class="challenge-tags">
                         <span class="tag">Linked List</span>
                         <span class="tag">Math</span>
                         <span class="tag">Recursion</span>
                     </div>
                     <div class="challenge-links">
-                        <a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/leetcode-solutions/add-two-numbers" target="_blank" class="solution-link">View Solution <i class="fas fa-code"></i></a>
+                        <a href="https://leetcode.com/problems/add-two-numbers/" target="_blank"
+                            class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/ankit6686510/leetcode-solutions/add-two-numbers" target="_blank"
+                            class="solution-link">View Solution <i class="fas fa-code"></i></a>
                     </div>
                     <div class="challenge-date">May 5, 2024</div>
                 </div>
@@ -598,24 +664,26 @@
                     </div>
                     <div class="social-icons">
                         <!-- <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a> -->
-                        <a href="https://github.com/ankit6686510" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/ankit6686510" target="_blank" class="social-icon"><i
+                                class="fa-brands fa-github"></i></a>
                         <!-- <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a> -->
-                        <a href="https://www.linkedin.com/in/ankitkumarjha/" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/ankitkumarjha/" target="_blank" class="social-icon"><i
+                                class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <a href="Ankit resume.pdf" download class="btn btn2">Download Resume</a>
                 </div>
                 <div class="contact-right" data-aos="fade-left">
                     <form name="submit-to-google-sheet">
                         <div class="input-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="input-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="input-group">
-                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                             <i class="fas fa-comment-alt"></i>
                         </div>
                         <button type="submit" class="btn btn2">Send Message <i class="fas fa-paper-plane"></i></button>
@@ -631,289 +699,290 @@
 
     <button id="back-to-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
 
-<script>
-    function opentab(tabname) {
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        for (var tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (var tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        document.getElementById(tabname).classList.add("active-tab");
-        event.currentTarget.classList.add("active-link");
-    }
-
-    function openmenu() {
-        document.getElementById("sidemenu").style.right = "0";
-    }
-
-    function closemenu() {
-        document.getElementById("sidemenu").style.right = "-200px";
-    }
-
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-        const themeToggle = document.getElementById('theme-toggle');
-        if (document.body.classList.contains('dark-mode')) {
-            themeToggle.classList.remove('fa-moon');
-            themeToggle.classList.add('fa-sun');
-            // Update particles color for dark mode
-            if (typeof pJSDom !== 'undefined' && pJSDom.length > 0) {
-                pJSDom[0].pJS.particles.color.value = "#ffffff";
-                pJSDom[0].pJS.particles.line_linked.color = "#ffffff";
-                pJSDom[0].pJS.fn.particlesRefresh();
+    <script>
+        function opentab(tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
             }
-        } else {
-            themeToggle.classList.remove('fa-sun');
-            themeToggle.classList.add('fa-moon');
-            // Update particles color for light mode
-            if (typeof pJSDom !== 'undefined' && pJSDom.length > 0) {
-                pJSDom[0].pJS.particles.color.value = "#3a3a3a";
-                pJSDom[0].pJS.particles.line_linked.color = "#3a3a3a";
-                pJSDom[0].pJS.fn.particlesRefresh();
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
             }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
         }
-        // Save preference to localStorage
-        localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
-    }
 
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
 
-    // Portfolio filtering
-    document.addEventListener('DOMContentLoaded', function() {
-        // Check saved theme preference
-        if (localStorage.getItem('dark-mode') === 'true') {
-            document.body.classList.add('dark-mode');
-            document.getElementById('theme-toggle').classList.remove('fa-moon');
-            document.getElementById('theme-toggle').classList.add('fa-sun');
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            const themeToggle = document.getElementById('theme-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggle.classList.remove('fa-moon');
+                themeToggle.classList.add('fa-sun');
+                // Update particles color for dark mode
+                if (typeof pJSDom !== 'undefined' && pJSDom.length > 0) {
+                    pJSDom[0].pJS.particles.color.value = "#ffffff";
+                    pJSDom[0].pJS.particles.line_linked.color = "#ffffff";
+                    pJSDom[0].pJS.fn.particlesRefresh();
+                }
+            } else {
+                themeToggle.classList.remove('fa-sun');
+                themeToggle.classList.add('fa-moon');
+                // Update particles color for light mode
+                if (typeof pJSDom !== 'undefined' && pJSDom.length > 0) {
+                    pJSDom[0].pJS.particles.color.value = "#3a3a3a";
+                    pJSDom[0].pJS.particles.line_linked.color = "#3a3a3a";
+                    pJSDom[0].pJS.fn.particlesRefresh();
+                }
+            }
+            // Save preference to localStorage
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // Portfolio filtering
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.work');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check saved theme preference
+            if (localStorage.getItem('dark-mode') === 'true') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.remove('fa-moon');
+                document.getElementById('theme-toggle').classList.add('fa-sun');
+            }
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                portfolioItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+            // Portfolio filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.work');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
                 });
             });
         });
-    });
 
-    window.onscroll = function() {
-        var backToTopButton = document.getElementById("back-to-top");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backToTopButton.style.display = "flex";
-        } else {
-            backToTopButton.style.display = "none";
-        }
-    };
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbye1R6D4vjcKZigI7NZloJ_-wiw55awbhe4Hx-xii38fk-lSKykmnmCCwYUGwMk6ffxZg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
+        window.onscroll = function () {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "flex";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbye1R6D4vjcKZigI7NZloJ_-wiw55awbhe4Hx-xii38fk-lSKykmnmCCwYUGwMk6ffxZg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script>
-    var typed = new Typed('#element', {
-      strings: [ 'Full Stack Developer', 'Problem Solver'],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true
-    });
-</script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 800,
-        easing: 'ease',
-        once: true
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 2,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 1,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Full Stack Developer', 'Problem Solver'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
                         }
                     },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
+                    "color": {
+                        "value": "#ffffff"
                     },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
                     },
-                    "push": {
-                        "particles_nb": 4
+                    "opacity": {
+                        "value": 0.5,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
                     },
-                    "remove": {
-                        "particles_nb": 2
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
                     }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            // Change particles color based on theme
+            function updateParticlesColor() {
+                if (document.body.classList.contains('dark-mode')) {
+                    pJSDom[0].pJS.particles.color.value = "#ffffff";
+                    pJSDom[0].pJS.particles.line_linked.color = "#ffffff";
+                } else {
+                    pJSDom[0].pJS.particles.color.value = "#3a3a3a";
+                    pJSDom[0].pJS.particles.line_linked.color = "#3a3a3a";
                 }
-            },
-            "retina_detect": true
-        });
-
-        // Change particles color based on theme
-        function updateParticlesColor() {
-            if (document.body.classList.contains('dark-mode')) {
-                pJSDom[0].pJS.particles.color.value = "#ffffff";
-                pJSDom[0].pJS.particles.line_linked.color = "#ffffff";
-            } else {
-                pJSDom[0].pJS.particles.color.value = "#3a3a3a";
-                pJSDom[0].pJS.particles.line_linked.color = "#3a3a3a";
+                pJSDom[0].pJS.fn.particlesRefresh();
             }
-            pJSDom[0].pJS.fn.particlesRefresh();
-        }
 
-        // Listen for theme changes
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', function() {
-            setTimeout(updateParticlesColor, 50);
-        });
+            // Listen for theme changes
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', function () {
+                setTimeout(updateParticlesColor, 50);
+            });
 
-        // Set initial particles color
-        setTimeout(updateParticlesColor, 100);
-        
-        // Static filtering for challenges
-        const challengeFilterBtns = document.querySelectorAll('.challenges-filter .filter-btn');
-        const challengeCards = document.querySelectorAll('.challenge-card');
-        
-        challengeFilterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                challengeFilterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                // Show/hide challenge cards based on filter
-                challengeCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-platform') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
+            // Set initial particles color
+            setTimeout(updateParticlesColor, 100);
+
+            // Static filtering for challenges
+            const challengeFilterBtns = document.querySelectorAll('.challenges-filter .filter-btn');
+            const challengeCards = document.querySelectorAll('.challenge-card');
+
+            challengeFilterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    challengeFilterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Show/hide challenge cards based on filter
+                    challengeCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-platform') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
         });
-    });
-</script>
+    </script>
 </body>
+
 </html>
