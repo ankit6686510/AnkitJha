@@ -658,4 +658,52 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return html;
     }
+
+    // Mobile menu functionality
+    function openmenu() {
+        const sidemenu = document.getElementById('sidemenu');
+        sidemenu.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    }
+
+    function closemenu() {
+        const sidemenu = document.getElementById('sidemenu');
+        sidemenu.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const sidemenu = document.getElementById('sidemenu');
+        const menuIcon = document.querySelector('.fa-bars');
+        
+        if (sidemenu.classList.contains('active') && 
+            !sidemenu.contains(e.target) && 
+            !menuIcon.contains(e.target)) {
+            closemenu();
+        }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('#sidemenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            closemenu();
+        });
+    });
+
+    // Add scroll event listener for navbar
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(18, 18, 18, 0.95)';
+            if (!document.body.classList.contains('dark-mode')) {
+                nav.style.background = 'rgba(245, 245, 247, 0.95)';
+            }
+        } else {
+            nav.style.background = 'rgba(18, 18, 18, 0.8)';
+            if (!document.body.classList.contains('dark-mode')) {
+                nav.style.background = 'rgba(245, 245, 247, 0.8)';
+            }
+        }
+    });
 }); 

@@ -173,40 +173,50 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding: 15px 30px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
-    margin-top: 10px;
+    margin: 10px 20px;
     position: sticky;
     top: 10px;
     z-index: 1000;
     background: rgba(18, 18, 18, 0.8);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
 body:not(.dark-mode) nav {
     background: rgba(245, 245, 247, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
     width: 140px;
     transition: var(--transition);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
-    
+
 .logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(-2deg);
 }
 
 nav ul {
     display: flex;
     padding: 0;
     margin: 0;
+    gap: 10px;
 }
 
 nav ul li {
     list-style: none;
-    margin: 10px 20px;
+    position: relative;
 }
 
 nav ul li a {
@@ -214,52 +224,122 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     position: relative;
-    transition: var(--transition);
+    overflow: hidden;
 }
 
 body:not(.dark-mode) nav ul li a {
     color: var(--light-text);
 }
 
-nav ul li a::after {
+nav ul li a::before {
     content: '';
-    width: 100%;
-    height: 3px;
-    background: var(--primary-color);
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: -6px;
-    transition: var(--transition);
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
     opacity: 0;
-    transform: scaleX(0);
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    z-index: -1;
+    border-radius: 8px;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::before {
     opacity: 1;
-    transform: scaleX(1);
+    transform: scale(1);
 }
 
-.fas.fa-moon, .fas.fa-bars, .fas.fa-times {
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-icons i {
     font-size: 1.5rem;
     cursor: pointer;
-    transition: var(--transition);
-    color: var(--dark-text);
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-body:not(.dark-mode) .fas.fa-moon, 
-body:not(.dark-mode) .fas.fa-bars, 
-body:not(.dark-mode) .fas.fa-times {
-    color: var(--light-text);
+.nav-icons i.fa-bars {
+    display: none; /* Hide menu icon by default on large screens */
 }
 
-.fas.fa-moon:hover, .fas.fa-bars:hover, .fas.fa-times:hover {
+.nav-icons i:hover {
     color: var(--primary-color);
-    transform: rotate(15deg);
+    transform: translateY(-2px) rotate(15deg);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+        margin: 10px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: var(--dark-bg);
+        flex-direction: column;
+        padding: 80px 40px;
+        transition: 0.5s;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    body:not(.dark-mode) nav ul {
+        background: var(--light-bg);
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .nav-icons i.fa-times {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 1.8rem;
+        display: block; /* Ensure times icon is visible on small screens */
+    }
+    
+    .nav-icons i.fa-bars {
+        display: block; /* Show menu icon on small screens */
+    }
+}
+
+/* Hide the close menu icon on larger screens */
+@media only screen and (min-width: 769px) {
+    #sidemenu .fa-times {
+        display: none;
+    }
 }
 
 #particles-js {
@@ -430,7 +510,6 @@ body:not(.dark-mode) .header-text h1 {
     height: 300px;
     background: radial-gradient(circle, rgba(var(--primary-color-rgb), 0.1), transparent 70%);
     border-radius: 50%;
-    animation: float 10s ease-in-out infinite;
     z-index: 1;
     opacity: 0.7;
 }
@@ -1761,11 +1840,13 @@ body:not(.dark-mode) .social-icon {
 }
 
 .logo {
-    animation: float 6s ease-in-out infinite;
+    width: 140px;
+    transition: var(--transition);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-.btn:hover {
-    animation: pulse 1s infinite;
+.logo:hover {
+    transform: scale(1.05) rotate(-2deg);
 }
 
 @keyframes fadeIn {
