@@ -1954,7 +1954,7 @@ body:not(.dark-mode) .nav-btn:hover {
 .nav-btn[download] {
     background: var(--primary-color);
     border: 2px solid var(--primary-color);
-    color: #fff;
+    color: #fff; /* Ensure text color is white */
     font-weight: 600;
     position: relative;
     overflow: hidden;
