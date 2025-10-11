@@ -4,14 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
-    <title>Ankit's Portfolio</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Ankit Jha - Full Stack Developer | React, Node.js, JavaScript Expert</title>
+    <meta name="title" content="Ankit Jha - Full Stack Developer | React, Node.js, JavaScript Expert">
+    <meta name="description" content="Experienced Full Stack Developer specializing in React, Node.js, and JavaScript. Building modern web applications with clean code and exceptional user experiences. Available for hire.">
+    <meta name="keywords" content="Full Stack Developer, React Developer, Node.js, JavaScript, Web Developer, Frontend, Backend, Portfolio, Ankit Jha, Software Engineer, Web Applications">
+    <meta name="author" content="Ankit Jha">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ankit6686510.github.io/AnkitJha/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ankit6686510.github.io/AnkitJha/">
+    <meta property="og:title" content="Ankit Jha - Full Stack Developer | React, Node.js, JavaScript Expert">
+    <meta property="og:description" content="Experienced Full Stack Developer specializing in React, Node.js, and JavaScript. Building modern web applications with clean code and exceptional user experiences.">
+    <meta property="og:image" content="https://ankit6686510.github.io/AnkitJha/ankit%20jha.jpg">
+    <meta property="og:site_name" content="Ankit Jha Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ankit6686510.github.io/AnkitJha/">
+    <meta property="twitter:title" content="Ankit Jha - Full Stack Developer | React, Node.js, JavaScript Expert">
+    <meta property="twitter:description" content="Experienced Full Stack Developer specializing in React, Node.js, and JavaScript. Building modern web applications with clean code and exceptional user experiences.">
+    <meta property="twitter:image" content="https://ankit6686510.github.io/AnkitJha/ankit%20jha.jpg">
+    <meta property="twitter:creator" content="@ankitjha">
+    
+    <!-- Favicon and Icons -->
     <link rel="icon" href="favicon.svg.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.svg.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/ef633b37d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ankit Jha",
+        "url": "https://ankit6686510.github.io/AnkitJha/",
+        "image": "https://ankit6686510.github.io/AnkitJha/ankit%20jha.jpg",
+        "jobTitle": "Full Stack Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "GGSIPU"
+        },
+        "knowsAbout": [
+            "JavaScript",
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "HTML",
+            "CSS",
+            "TypeScript",
+            "Full Stack Development",
+            "Web Development",
+            "Software Engineering"
+        ],
+        "sameAs": [
+            "https://github.com/ankit6686510",
+            "https://www.linkedin.com/in/ankiitjhaa/"
+        ],
+        "email": "ankit6686510@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi",
+            "addressCountry": "India"
+        }
+    }
+    </script>
+    
+    <!-- Performance and SEO -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//kit.fontawesome.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
     <style>
         /* Light mode fixes for challenges section */
         body:not(.dark-mode) #challenges {
@@ -100,21 +185,20 @@
         <div class="header-decorative-circle"></div>
         <div class="header-decorative-circle"></div>
         <div class="container">
-            <nav>
-                <img src="logo-color__1_-removebg-preview.png" class="logo" alt="Logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul id="sidemenu" role="menubar">
+                    <li role="none"><a href="#header" role="menuitem" aria-label="Go to Home section">Home</a></li>
+                    <li role="none"><a href="#about" role="menuitem" aria-label="Go to About section">About</a></li>
+                    <li role="none"><a href="#services" role="menuitem" aria-label="Go to Services section">Services</a></li>
+                    <li role="none"><a href="#portfolio" role="menuitem" aria-label="Go to Portfolio section">Portfolio</a></li>
+                    <li role="none"><a href="#contact" role="menuitem" aria-label="Go to Contact section">Contact</a></li>
+                    <li role="none"><button id="theme-toggle" onclick="toggleDarkMode()" class="theme-btn" aria-label="Toggle dark/light mode" aria-pressed="false">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button></li>
+                    <i class="fas fa-times" onclick="closemenu()" aria-label="Close navigation menu" aria-hidden="true"></i>
                 </ul>
-                <div class="nav-icons">
-                    <i class="fas fa-bars" onclick="openmenu()"></i>
-                    <i class="fas fa-moon" id="theme-toggle" onclick="toggleDarkMode()"></i>
+                <div class="nav-controls">
+                    <i class="fas fa-bars menu-toggle" onclick="openmenu()" aria-label="Open navigation menu" role="button" tabindex="0" aria-hidden="true"></i>
                 </div>
             </nav>
             <div class="header-text">
@@ -153,20 +237,14 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1" data-aos="fade-right">
-                    <img src="ankit jha.jpg" alt="User">
-                </div>
-                <div class="about-col-2" data-aos="fade-left">
+                <div class="about-col-2" data-aos="fade-up">
                     <h1 class="sub-title">About Me <span class="accent-dot"></span></h1>
                     <div class="about-content">
-                        <p><i class="fas fa-quote-left quote-icon"></i> Hi there! I'm currently pursuing my Bachelor of
-                            Technology degree from GGSIPU, and I am absolutely passionate about the world of software
-                            development, web development, and blockchain technology.
-                            <br><br>It has always fascinated me how a few lines of code can transform into a functional
-                            program that can make people's lives easier and more convenient.
-                            I have always had an innate curiosity for how technology works and how it can be used to
-                            solve real-world problems. This curiosity has led me down the path of software development,
-                            and I am thrilled to be learning and growing in this field.<i
+                        <p><i class="fas fa-quote-left quote-icon"></i> Hi there! I'm Ankit Kumar Jha, currently pursuing my Bachelor of
+                            Technology in Electrical and Electronics Engineering from Guru Gobind Singh Indraprastha University (GGSIPU) with a CGPA of 7.708/10.
+                            <br><br>I'm a passionate Product Solution Engineer at Juspay, where I handle payment infrastructure for 10+ international merchants and ensure seamless payment operations. 
+                            My journey in technology has been driven by curiosity about how code can transform ideas into functional solutions that make people's lives easier.
+                            <br><br>With experience in full-stack development, AI systems, and payment infrastructure, I thrive on solving complex technical challenges and building scalable solutions.<i
                                 class="fas fa-quote-right quote-icon"></i>
                         </p>
                     </div>
@@ -181,89 +259,56 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li>
-                                <span>Javascript(Proficient), Java(DSA)</span>
-                                <div class="skill-progress">
-                                    <div class="skill-bar" style="width: 90%;">
-                                        <div class="skill-percent">90%</div>
-                                    </div>
-                                </div>
-                                <p>Developing Problem Solving skills using Java and Javascript</p>
+                                <span>Programming Languages</span>
+                                <p>Haskell, Java (DSA), Python, JavaScript, TypeScript</p>
                             </li>
                             <li>
-                                <span>Full Stack Web Development:</span>
-                                <div class="skill-progress">
-                                    <div class="skill-bar" style="width: 85%;">
-                                        <div class="skill-percent">85%</div>
-                                    </div>
-                                </div>
-                                <p>Developing Web-Apps using HTML, CSS, Javascript, 
-                                        Rect.js, Bootstrap/Tailwind CSS, TypeScript, Node.js,
-                                    Express.js</p>
+                                <span>Frontend Development</span>
+                                <p>HTML, CSS, React.js, Bootstrap, Tailwind CSS</p>
                             </li>
                             <li>
-                                <span>Database:</span>
-                                <div class="skill-progress">
-                                    <div class="skill-bar" style="width: 80%;">
-                                        <div class="skill-percent">80%</div>
-                                    </div>
-                                </div>
-                                <p>MongoDB </p>
+                                <span>Backend Development</span>
+                                <p>Node.js, Express.js, RESTful APIs</p>
                             </li>
                             <li>
-                                <span>Version Control:</span>
-                                <div class="skill-progress">
-                                    <div class="skill-bar" style="width: 95%;">
-                                        <div class="skill-percent">95%</div>
-                                    </div>
-                                </div>
-                                <p>Git and GitHub, <a href="https://github.com/ankit6686510" target="_blank">GitHub</a></p>
+                                <span>Databases</span>
+                                <p>MongoDB, SQL, PostgreSQL, Redis</p>
                             </li>
                             <li>
-                                <span>APIs and Tools:</span>
-                                <div class="skill-progress">
-                                    <div class="skill-bar" style="width: 75%;">
-                                        <div class="skill-percent">75%</div>
-                                    </div>
-                                </div>
-                                <p>RESTful APIs, GraphQL(currently Learning), Postman</p>
+                                <span>Tools & Technologies</span>
+                                <p>Git, GitHub, Postman, IntelliJ, VS Code, Eclipse, Docker, AWS EC2, NGINX</p>
+                            </li>
+                            <li>
+                                <span>AI & Analytics</span>
+                                <p>RAG Systems, Google Gemini, Pinecone, FastAPI</p>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Experience">
                         <ul>
                             <li>
-                                <span><i class="fas fa-calendar-alt"></i> 2021</span>
-                                <p>It was a depressing phase of my life & at that time I focused on working on myself
-                                    and building resilience through personal development.</p>
+                                <span><i class="fas fa-briefcase"></i> July 2025 – Present</span>
+                                <p><strong>Product Solution Engineer (PSE) – Juspay, Bangalore</strong><br>
+                                   • Handling Payment Infrastructure of more than 10+ international merchants<br>
+                                   • Ensured seamless payment operations and system reliability<br>
+                                   • Diagnosed production issues via Kibana and OpenSearch</p>
                             </li>
                             <li>
-                                <span><i class="fas fa-calendar-alt"></i> 2022</span>
-                                <p>Self-taught React.js and Redux, building several personal projects to strengthen my
-                                    front-end development skills.</p>
-                            </li>
-                            <li>
-                                <span><i class="fas fa-calendar-alt"></i> 2024</span>
-                                <p>Secured internship position at D-Link, working on real-world networking and software
-                                    development projects.</p>
+                                <span><i class="fas fa-briefcase"></i> July 2024 – Aug 2024</span>
+                                <p><strong>Backend Engineer Intern – D-Link, New Delhi</strong><br>
+                                   • Maintained enterprise network infrastructure and troubleshooting<br>
+                                   • Worked with routing protocols, Linux systems, and hardware setups<br>
+                                   • Automated monitoring tasks using Node.js</p>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Education">
                         <ul>
                             <li>
-                                <span><i class="fas fa-graduation-cap"></i> 2019</span>
-                                <p>Completed Matriculation with distinction in mathematics and science subjects.</p>
-                            </li>
-                            <li>
-                                <span><i class="fas fa-graduation-cap"></i> 2021</span>
-                                <p>Completed Higher Secondary education with focus on computer science and technology.
-                                </p>
-                            </li>
-                            <li>
-                                <span><i class="fas fa-graduation-cap"></i> 2022 - Present</span>
-                                <p>Joined GGSIPU for B.Tech program, initially in Artificial Intelligence and Data
-                                    Science (AIDS), later transferred to Electrical and Electronics Engineering (EEE).
-                                </p>
+                                <span><i class="fas fa-graduation-cap"></i> Nov 2022 – Apr 2026</span>
+                                <p><strong>B.Tech in Electrical and Electronics Engineering</strong><br>
+                                   Guru Gobind Singh Indraprastha University, New Delhi, India<br>
+                                   CGPA: 7.708/10</p>
                             </li>
                         </ul>
                     </div>
@@ -318,9 +363,8 @@
                 <div class="work" data-aos="fade-up" data-aos-delay="100" data-category="web">
                     <img src="karm.jpg" alt="Karm Platform">
                     <div class="layer">
-                        <h3>Karm Platform</h3>
-                        <p>A comprehensive job and internship platform connecting talented individuals with
-                            opportunities.</p>
+                        <h3>Karm – Job & Internship Platform</h3>
+                        <p>Built full-stack recruitment platform with JWT authentication and scalable REST APIs. Optimized MongoDB schemas and deployed on Render. Pitched to Y Combinator as a startup concept.</p>
                         <div class="project-links">
                             <a href="https://thekarm.onrender.com/" target="_blank" rel="noopener noreferrer"
                                 class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
@@ -329,11 +373,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="work" data-aos="fade-up" data-aos-delay="200" data-category="web">
+                <div class="work" data-aos="fade-up" data-aos-delay="200" data-category="app">
+                    <img src="work-1.png" alt="SherlockAI">
+                    <div class="layer">
+                        <h3>SherlockAI – AI-Powered Issue Intelligence</h3>
+                        <p>Built production-grade RAG system with Google Gemini, Pinecone, FastAPI, and React/TypeScript to help engineers find solutions from 100+ past incidents. Implemented semantic search with 95%+ accuracy.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link disabled"><i class="fa-solid fa-globe"></i> Enterprise Project</a>
+                            <a href="#" class="project-link disabled"><i class="fab fa-github"></i> Private Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work" data-aos="fade-up" data-aos-delay="300" data-category="web">
+                    <img src="work-2.png" alt="SecondMarket Platform">
+                    <div class="layer">
+                        <h3>SecondMarket – New & Old Product Platform</h3>
+                        <p>Engineered scalable backend with indexed MongoDB models, JWT auth, and bcrypt. Deployed on AWS EC2 using NGINX + PM2 for stability. Socket.io for real-time features.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link disabled"><i class="fa-solid fa-globe"></i> Coming Soon</a>
+                            <a href="https://github.com/ankit6686510/buy-sell" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work" data-aos="fade-up" data-aos-delay="400" data-category="web">
+                    <img src="xenocrm.png" alt="Xeno CRM Platform">
+                    <div class="layer">
+                        <h3>CRM Platform for Xeno.ai</h3>
+                        <p>Architected full-stack CRM with segmentation, CSV import/export, and real-time updates for 1000+ records. Implemented Google OAuth, REST APIs with validation, and Swagger documentation.</p>
+                        <div class="project-links">
+                            <a href="https://insight-crm-main.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                            <a href="https://github.com/ankit6686510/CRM-main" target="_blank"
+                                rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work" data-aos="fade-up" data-aos-delay="500" data-category="web">
                     <img src="zaika.png" alt="Zaika Food Website">
                     <div class="layer">
                         <h3>Zaika Food Website</h3>
-                        <p>A modern food ordering platform with a beautiful UI and seamless user experience.</p>
+                        <p>A modern food ordering platform with beautiful UI and seamless user experience built with React and modern web technologies.</p>
                         <div class="project-links">
                             <a href="https://zaikaafood.netlify.app/" target="_blank" rel="noopener noreferrer"
                                 class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
@@ -342,11 +422,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="work" data-aos="fade-up" data-aos-delay="300" data-category="web">
+                <div class="work" data-aos="fade-up" data-aos-delay="600" data-category="web">
                     <img src="budmatching.png" alt="BudMatching Platform">
                     <div class="layer">
                         <h3>BudMatching Platform</h3>
-                        <p>A comprehensive platform for finding your lost earbuds with advanced features.</p>
+                        <p>A comprehensive platform for finding your lost earbuds with advanced features and modern design implementation.</p>
                         <div class="project-links">
                             <a href="https://budmatching.netlify.app/" target="_blank" rel="noopener noreferrer"
                                 class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
@@ -356,285 +436,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="work" data-aos="fade-up" data-aos-delay="400" data-category="web">
-                    <img src="xenocrm.png" alt="Xeno CRM Platform">
-                    <div class="layer">
-                        <h3>Xeno CRM Platform</h3>
-                        <p>A powerful CRM platform built for Branch, featuring advanced customer relationship management
-                            tools.</p>
-                        <div class="project-links">
-                            <a href="https://xenocrmproject.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="project-link"><i class="fa-solid fa-globe"></i> Live Demo</a>
-                                <!-- //update link -->
-                            <a href="https://github.com/ankit6686510/xeno-assignment" target="_blank"
-                                rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Source
-                                Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="work" data-aos="fade-up" data-aos-delay="500" data-category="web">
-                    <img src="work-1.png" alt="Project 1">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>A full-stack social media application with real-time features and modern UI.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link disabled"><i class="fa-solid fa-globe"></i> Coming Soon</a>
-                            <a href="#" class="project-link disabled"><i class="fab fa-github"></i> Coming Soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="work" data-aos="fade-up" data-aos-delay="600" data-category="web">
-                    <img src="work-2.png" alt="Project 2">
-                    <div class="layer">
-                        <h3>E-Commerce Platform</h3>
-                        <p>An online shopping platform with secure payment integration and user-friendly interface.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link disabled"><i class="fa-solid fa-globe"></i> Coming Soon</a>
-                            <a href="#" class="project-link disabled"><i class="fab fa-github"></i> Coming Soon</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="work" data-aos="fade-up" data-aos-delay="700" data-category="web">
-                    <img src="work-3.png" alt="Project 3">
-                    <div class="layer">
-                        <h3>Task Management System</h3>
-                        <p>A comprehensive task management solution with team collaboration features.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link disabled"><i class="fa-solid fa-globe"></i> Coming Soon</a>
-                            <a href="#" class="project-link disabled"><i class="fab fa-github"></i> Coming Soon</a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <a href="#" class="btn" data-aos="fade-up">See more</a>
         </div>
     </div>
 
-    <!-- Testimonials Section -->
-    <div id="testimonials">
-        <div class="container">
-            <h1 class="sub-title" data-aos="fade-up">Testimonials</h1>
-            <div class="testimonial-list">
-                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
-                    <p>"Ankit is a fantastic developer! He delivered the project on time and exceeded our expectations."
-                    </p>
-                    <div class="testimonial-info">
-                        <div class="testimonial-img">
-                            <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Client">
-                        </div>
-                        <div class="testimonial-details">
-                            <h3>abhinayak </h3>
-                            <span>CEO, TechCorp</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
-                    <p>"Working with Ankit was a pleasure. His skills and dedication are top-notch."</p>
-                    <div class="testimonial-info">
-                        <div class="testimonial-img">
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
-                        </div>
-                        <div class="testimonial-details">
-                            <h3>Sarah gupta</h3>
-                            <span>CTO, WebSolutions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Blog Section -->
-    <div id="blog">
-        <div class="container">
-            <h1 class="sub-title" data-aos="fade-up">Blog</h1>
-            <p class="section-desc" data-aos="fade-up">Check out my latest thoughts and tutorials on web development.
-            </p>
-
-            <div class="blog-list">
-                <!-- Static blog posts -->
-                <div class="blog-post" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-date">
-                        <span class="day">15</span>
-                        <span class="month">May</span>
-                    </div>
-                    <h2>Understanding JavaScript Closures</h2>
-                    <div class="blog-content">
-                        <p>Closures are one of the most powerful features of JavaScript but they can also be one of the
-                            most confusing. In this post, I'll break down what closures are and how to use them
-                            effectively.</p>
-                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1000"
-                            alt="JavaScript Closures" class="blog-image">
-                    </div>
-                    <div class="blog-post-footer">
-                        <div class="blog-post-meta">
-                            <span>May 15, 2024</span>
-                        </div>
-                        <div class="blog-post-author">
-                            <img src="ankit jha.jpg" alt="Ankit">
-                            <span>Ankit</span>
-                        </div>
-                    </div>
-                    <a href="#" class="read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-
-                <div class="blog-post" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-date">
-                        <span class="day">28</span>
-                        <span class="month">Apr</span>
-                    </div>
-                    <h2>Getting Started with React</h2>
-                    <div class="blog-content">
-                        <p>React is a popular JavaScript library for building user interfaces, particularly single-page
-                            applications. In this post, I'll walk you through setting up a basic React application and
-                            explain some core concepts.</p>
-                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=1000" alt="React"
-                            class="blog-image">
-                    </div>
-                    <div class="blog-post-footer">
-                        <div class="blog-post-meta">
-                            <span>April 28, 2024</span>
-                        </div>
-                        <div class="blog-post-author">
-                            <img src="ankit jha.jpg" alt="Ankit">
-                            <span>Ankit</span>
-                        </div>
-                    </div>
-                    <a href="#" class="read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-
-                <div class="blog-post" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-date">
-                        <span class="day">10</span>
-                        <span class="month">Mar</span>
-                    </div>
-                    <h2>CSS Grid vs Flexbox: When to Use Each</h2>
-                    <div class="blog-content">
-                        <p>CSS layout has evolved significantly over the years. Two of the most powerful tools for
-                            creating layouts are CSS Grid and Flexbox. But when should you use one over the other? In
-                            this post, I'll break down the differences.</p>
-                        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1000"
-                            alt="CSS Grid vs Flexbox" class="blog-image">
-                    </div>
-                    <div class="blog-post-footer">
-                        <div class="blog-post-meta">
-                            <span>March 10, 2024</span>
-                        </div>
-                        <div class="blog-post-author">
-                            <img src="ankit jha.jpg" alt="Ankit">
-                            <span>Ankit</span>
-                        </div>
-                    </div>
-                    <a href="#" class="read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Coding Challenges Section -->
-    <div id="challenges">
-        <div class="container">
-            <h1 class="sub-title" data-aos="fade-up">Coding Challenges</h1>
-            <p class="section-desc" data-aos="fade-up">Solutions to algorithmic problems from platforms like LeetCode,
-                HackerRank, and more.</p>
-
-            <div class="challenges-filter" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="leetcode">LeetCode</button>
-                <button class="filter-btn" data-filter="hackerrank">HackerRank</button>
-                <button class="filter-btn" data-filter="codechef">CodeChef</button>
-            </div>
-
-            <div class="challenges-list">
-                <!-- Static challenges -->
-                <div class="challenge-card" data-aos="fade-up" data-aos-delay="100" data-platform="leetcode">
-                    <div class="challenge-header">
-                        <span class="challenge-platform leetcode">LeetCode</span>
-                        <span class="challenge-difficulty easy">Easy</span>
-                    </div>
-                    <h3>Two Sum</h3>
-                    <p>Given an array of integers nums and an integer target, return indices of the two numbers such
-                        that they add up to target. You may assume that each input would have exactly one solution.</p>
-                    <div class="challenge-tags">
-                        <span class="tag">Array</span>
-                        <span class="tag">Hash Table</span>
-                    </div>
-                    <div class="challenge-links">
-                        <a href="https://leetcode.com/problems/two-sum/" target="_blank" class="problem-link">View
-                            Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/leetcode-solutions/two-sum" target="_blank"
-                            class="solution-link">View Solution <i class="fas fa-code"></i></a>
-                    </div>
-                    <div class="challenge-date">May 10, 2025</div>
-                </div>
-
-                <div class="challenge-card" data-aos="fade-up" data-aos-delay="200" data-platform="hackerrank">
-                    <div class="challenge-header">
-                        <span class="challenge-platform hackerrank">HackerRank</span>
-                        <span class="challenge-difficulty easy">Easy</span>
-                    </div>
-                    <h3>Diagonal Difference</h3>
-                    <p>Given a square matrix, calculate the absolute difference between the sums of its diagonals.</p>
-                    <div class="challenge-tags">
-                        <span class="tag">Array</span>
-                        <span class="tag">Math</span>
-                    </div>
-                    <div class="challenge-links">
-                        <a href="https://www.hackerrank.com/challenges/diagonal-difference/problem" target="_blank"
-                            class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/hackerrank-solutions/diagonal-difference"
-                            target="_blank" class="solution-link">View Solution <i class="fas fa-code"></i></a>
-                    </div>
-                    <div class="challenge-date">March 28, 2025</div>
-                </div>
-
-                <div class="challenge-card" data-aos="fade-up" data-aos-delay="300" data-platform="codechef">
-                    <div class="challenge-header">
-                        <span class="challenge-platform codechef">CodeChef</span>
-                        <span class="challenge-difficulty easy">Easy</span>
-                    </div>
-                    <h3>Chef and Operators</h3>
-                    <p>Chef has just started programming, he is in first grade of programming school. Chef is reading
-                        about relational operators in his class, he wants to help Chef solve programming problems by
-                        finding relational operators that will satisfy given equations.</p>
-                    <div class="challenge-tags">
-                        <span class="tag">Basic Programming</span>
-                        <span class="tag">Operators</span>
-                    </div>
-                    <div class="challenge-links">
-                        <a href="https://www.codechef.com/problems/CHOPRT" target="_blank" class="problem-link">View
-                            Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/codechef-solutions/chef-and-operators" target="_blank"
-                            class="solution-link">View Solution <i class="fas fa-code"></i></a>
-                    </div>
-                    <div class="challenge-date">March 12, 2024</div>
-                </div>
-
-                <div class="challenge-card" data-aos="fade-up" data-aos-delay="400" data-platform="leetcode">
-                    <div class="challenge-header">
-                        <span class="challenge-platform leetcode">LeetCode</span>
-                        <span class="challenge-difficulty medium">Medium</span>
-                    </div>
-                    <h3>Add Two Numbers</h3>
-                    <p>You are given two non-empty linked lists representing two non-negative integers. The digits are
-                        stored in reverse order, and each of their nodes contains a single digit. Add the two numbers
-                        and return the sum as a linked list.</p>
-                    <div class="challenge-tags">
-                        <span class="tag">Linked List</span>
-                        <span class="tag">Math</span>
-                        <span class="tag">Recursion</span>
-                    </div>
-                    <div class="challenge-links">
-                        <a href="https://leetcode.com/problems/add-two-numbers/" target="_blank"
-                            class="problem-link">View Problem <i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/ankit6686510/leetcode-solutions/add-two-numbers" target="_blank"
-                            class="solution-link">View Solution <i class="fas fa-code"></i></a>
-                    </div>
-                    <div class="challenge-date">May 5, 2024</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Contact Section -->
     <div id="contact">
@@ -820,7 +627,8 @@
             strings: ['Full Stack Developer', 'Problem Solver'],
             typeSpeed: 100,
             backSpeed: 60,
-            loop: true
+            loop: true,
+            showCursor: false
         });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

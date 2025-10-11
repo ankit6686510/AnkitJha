@@ -691,8 +691,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add scroll event listener for navbar
-    window.addEventListener('scroll', () => {
+    // Debounce function for performance optimization
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Optimized scroll handler
+    function handleScroll() {
         const nav = document.querySelector('nav');
         if (window.scrollY > 50) {
             nav.style.background = 'rgba(18, 18, 18, 0.95)';
@@ -703,6 +716,79 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.style.background = 'rgba(18, 18, 18, 0.8)';
             if (!document.body.classList.contains('dark-mode')) {
                 nav.style.background = 'rgba(245, 245, 247, 0.8)';
+            }
+        }
+        
+        // Update active navigation link based on scroll position
+        updateActiveNavLink();
+    }
+    
+    // Add debounced scroll event listener for navbar
+    window.addEventListener('scroll', debounce(handleScroll, 10));
+    
+    // Function to update active navigation link
+    function updateActiveNavLink() {
+        const sections = ['header', 'about', 'services', 'portfolio', 'contact'];
+        const navLinks = document.querySelectorAll('#sidemenu a');
+        
+        let currentSection = 'header';
+        
+        // Check which section is currently in view
+        for (let section of sections) {
+            const element = document.getElementById(section);
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                // If section is in the top half of the viewport
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    currentSection = section;
+                    break;
+                }
+            }
+        }
+        
+        // Remove active class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        // Add active class to current section link
+        const activeLink = document.querySelector(`#sidemenu a[href="#${currentSection}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
+    
+    // Initialize active link on page load
+    updateActiveNavLink();
+    
+    // Add keyboard navigation support for mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openmenu();
+            }
+        });
+    }
+    
+    // Add keyboard support for close menu
+    const closeButton = document.querySelector('.fa-times');
+    if (closeButton) {
+        closeButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                closemenu();
+            }
+        });
+    }
+    
+    // Close menu with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const sidemenu = document.getElementById('sidemenu');
+            if (sidemenu.classList.contains('active')) {
+                closemenu();
             }
         }
     });

@@ -124,16 +124,7 @@
     z-index: 10;
 }
 
-/* Ensure navbar is visible */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 15px 0;
-    position: relative;
-    z-index: 100;
-}
+
 
 /* Ensure the particles background doesn't hide content */
 #particles-js {
