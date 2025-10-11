@@ -1115,11 +1115,16 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity var(--transition-normal);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all var(--transition-normal);
+    z-index: 10;
 }
 
 .project-card:hover .project-overlay {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .project-links {
