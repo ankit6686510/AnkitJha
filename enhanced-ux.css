@@ -1,0 +1,707 @@
+/* ============================================
+   ENHANCED USER EXPERIENCE CSS
+   Premium UX features styling
+   ============================================ */
+
+/* ============================================
+   1. READING TIME ESTIMATES
+   ============================================ */
+
+.reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-light);
+    font-weight: 500;
+}
+
+.reading-time i {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.section-reading-time {
+    margin-bottom: var(--spacing-lg);
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.1), 
+        rgba(6, 182, 212, 0.1));
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* ============================================
+   2. BREADCRUMB NAVIGATION
+   ============================================ */
+
+.breadcrumb-nav {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-sticky);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.breadcrumb-nav:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.breadcrumb-container {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    min-width: 400px;
+}
+
+.breadcrumb-items {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.breadcrumb-item i {
+    font-size: 12px;
+}
+
+.breadcrumb-item.past {
+    color: var(--text-tertiary);
+    opacity: 0.6;
+}
+
+.breadcrumb-item.active {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.breadcrumb-item.future {
+    color: var(--text-secondary);
+    opacity: 0.4;
+}
+
+.breadcrumb-item:hover:not(.active) {
+    background: var(--bg-secondary);
+    transform: translateY(-2px);
+}
+
+.breadcrumb-title {
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+}
+
+.breadcrumb-progress {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+/* ============================================
+   3. KEYBOARD SHORTCUTS GUIDE
+   ============================================ */
+
+.shortcuts-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.shortcuts-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.shortcuts-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.shortcuts-container {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    overflow: hidden;
+    transform: scale(0.9) translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.shortcuts-modal.open .shortcuts-container {
+    transform: scale(1) translateY(0);
+}
+
+.shortcuts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.shortcuts-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-weight: 600;
+}
+
+.shortcuts-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast);
+}
+
+.shortcuts-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.shortcuts-content {
+    padding: var(--spacing-xl);
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.shortcuts-intro {
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.shortcuts-intro p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+}
+
+.shortcuts-grid {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-fast);
+}
+
+.shortcut-item:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.shortcut-key {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    min-width: 80px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.shortcut-description {
+    color: var(--text-primary);
+    font-weight: 500;
+    flex: 1;
+}
+
+.shortcuts-footer {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-light);
+}
+
+.shortcuts-footer p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.shortcuts-footer kbd {
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-mono);
+}
+
+/* ============================================
+   4. SEARCH FUNCTIONALITY
+   ============================================ */
+
+.search-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.search-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.search-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    overflow: hidden;
+    transform: scale(0.9) translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.search-modal.open .search-container {
+    transform: scale(1) translateY(0);
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-light);
+    gap: var(--spacing-md);
+}
+
+.search-icon {
+    color: var(--text-tertiary);
+    font-size: var(--font-size-lg);
+}
+
+#search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+#search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.search-escape {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-mono);
+    border: 1px solid var(--border-color);
+}
+
+.search-results {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.search-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl);
+    color: var(--text-tertiary);
+    text-align: center;
+}
+
+.search-empty i {
+    font-size: 48px;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.5;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item.selected {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--primary-color);
+}
+
+.search-result-item:hover {
+    background: var(--bg-secondary);
+}
+
+.search-result-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.search-result-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-result-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-base);
+}
+
+.search-result-title mark {
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.search-result-description {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-result-description mark {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary-color);
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.search-result-category {
+    color: var(--text-tertiary);
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.search-result-type {
+    color: var(--text-tertiary);
+    font-size: var(--font-size-xs);
+    background: var(--bg-tertiary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 1px solid var(--border-light);
+}
+
+.search-footer {
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-light);
+}
+
+.search-tips {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.search-tips span {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.search-tips kbd {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-mono);
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================
+   5. SEARCH HIGHLIGHT EFFECT
+   ============================================ */
+
+.search-highlight {
+    animation: searchHighlight 2s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes searchHighlight {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.8);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(99, 102, 241, 0.2);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+        transform: scale(1);
+    }
+}
+
+/* ============================================
+   6. RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .breadcrumb-container {
+        min-width: 300px;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .breadcrumb-title {
+        display: none;
+    }
+    
+    .breadcrumb-item {
+        padding: var(--spacing-xs);
+    }
+    
+    .shortcuts-container {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .shortcuts-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .shortcuts-grid {
+        gap: var(--spacing-sm);
+    }
+    
+    .shortcut-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+        text-align: left;
+    }
+    
+    .shortcut-key {
+        min-width: auto;
+        align-self: flex-start;
+    }
+    
+    .search-container {
+        width: 95%;
+    }
+    
+    .search-input-container {
+        padding: var(--spacing-md);
+    }
+    
+    .search-tips {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb-nav {
+        top: 70px;
+    }
+    
+    .breadcrumb-container {
+        min-width: 250px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .reading-time {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    
+    .shortcuts-header {
+        padding: var(--spacing-lg);
+    }
+    
+    .shortcuts-content {
+        padding: var(--spacing-md);
+        max-height: 65vh;
+    }
+    
+    .search-result-item {
+        padding: var(--spacing-md);
+    }
+    
+    .search-result-description {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+    }
+}
+
+/* ============================================
+   7. DARK THEME ENHANCEMENTS
+   ============================================ */
+
+.dark-theme .breadcrumb-container {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: var(--border-color);
+}
+
+.dark-theme .shortcuts-container {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .search-container {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .reading-time {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* ============================================
+   8. ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .breadcrumb-nav,
+    .shortcuts-container,
+    .search-container {
+        transition: none !important;
+    }
+    
+    .search-highlight {
+        animation: none !important;
+        box-shadow: 0 0 0 2px var(--primary-color) !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.breadcrumb-item:focus,
+.shortcut-item:focus,
+.search-result-item:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .breadcrumb-container,
+    .shortcuts-container,
+    .search-container {
+        border-width: 2px;
+    }
+    
+    .reading-time {
+        border-width: 2px;
+    }
+}

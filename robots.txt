@@ -1,0 +1,66 @@
+# Robots.txt for Ankit Jha Portfolio
+# Optimized for maximum search engine visibility
+
+User-agent: *
+Allow: /
+
+# Priority pages for crawling
+Allow: /index.html
+Allow: /#about
+Allow: /#portfolio
+Allow: /#services
+Allow: /#contact
+
+# Static assets
+Allow: /style.css
+Allow: /next-gen-styles.css
+Allow: /advanced-animations.css
+Allow: /enhanced-ux.css
+Allow: /next-gen-features.js
+Allow: /advanced-animations.js
+Allow: /enhanced-ux.js
+
+# Images and media
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.svg
+Allow: /*.pdf
+
+# PWA files
+Allow: /manifest.json
+Allow: /sw.js
+
+# Disallow unnecessary files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
+
+# Sitemap location
+Sitemap: https://ankit6686510.github.io/AnkitJha/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Additional directives for better SEO
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

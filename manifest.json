@@ -1,0 +1,72 @@
+{
+  "name": "Ankit Jha - Full Stack Developer Portfolio",
+  "short_name": "Ankit Jha",
+  "description": "Ankit Jha - Full Stack Developer specializing in React, Node.js, JavaScript. Product Solution Engineer at Juspay with expertise in AI/ML and payment systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["developer", "portfolio", "technology", "software", "engineering"],
+  "icons": [
+    {
+      "src": "favicon.svg.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "ankit jha.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Ankit Jha Portfolio Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "Browse Ankit's latest development projects",
+      "url": "/#portfolio",
+      "icons": [{"src": "favicon.svg.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with Ankit Jha",
+      "url": "/#contact",
+      "icons": [{"src": "favicon.svg.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn more about Ankit's background and skills",
+      "url": "/#about",
+      "icons": [{"src": "favicon.svg.png", "sizes": "192x192"}]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "iarc_rating_id": "",
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
