@@ -940,6 +940,53 @@ body {
     border-color: var(--primary-color);
 }
 
+/* Company Links Styling */
+.company-link {
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.company-link .company {
+    transition: all var(--transition-fast);
+}
+
+.company-link:hover .company {
+    color: var(--primary-color);
+    transform: translateX(2px);
+}
+
+.company-logo-link {
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-lg);
+}
+
+.company-logo-link:hover {
+    transform: translateY(-4px);
+}
+
+.company-logo-link:hover .company-logo {
+    transform: translateY(0);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.company-logo-link:hover .timeline-logo {
+    transform: scale(1.1);
+}
+
+/* Active and Focus states for accessibility */
+.company-link:focus,
+.company-logo-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.company-link:active .company {
+    color: var(--primary-dark);
+}
+
 /* Mobile responsiveness for experience header */
 @media (max-width: 768px) {
     .experience-header {
@@ -957,6 +1004,10 @@ body {
     .timeline-logo {
         padding: 6px;
     }
+    
+    .company-logo-link:hover {
+        transform: translateY(-2px);
+    }
 }
 
 @media (max-width: 480px) {
@@ -971,6 +1022,10 @@ body {
     
     .timeline-logo {
         padding: 5px;
+    }
+    
+    .company-link:hover .company {
+        transform: translateX(1px);
     }
 }
 
