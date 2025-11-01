@@ -23,18 +23,19 @@ class ReadingTimeEstimator {
     }
 
     addReadingTimeToProjects() {
-        document.querySelectorAll('.project-card').forEach(card => {
-            const description = card.querySelector('p');
-            if (description) {
-                const readingTime = this.calculateReadingTime(description.textContent);
-                const timeIndicator = document.createElement('div');
-                timeIndicator.className = 'reading-time';
-                timeIndicator.innerHTML = `<i class="fas fa-clock"></i> ${readingTime} min read`;
-                
-                const projectContent = card.querySelector('.project-content');
-                projectContent.insertBefore(timeIndicator, description);
-            }
-        });
+        // Disabled - not adding reading time to projects
+        // document.querySelectorAll('.project-card').forEach(card => {
+        //     const description = card.querySelector('p');
+        //     if (description) {
+        //         const readingTime = this.calculateReadingTime(description.textContent);
+        //         const timeIndicator = document.createElement('div');
+        //         timeIndicator.className = 'reading-time';
+        //         timeIndicator.innerHTML = `<i class="fas fa-clock"></i> ${readingTime} min read`;
+        //         
+        //         const projectContent = card.querySelector('.project-content');
+        //         projectContent.insertBefore(timeIndicator, description);
+        //     }
+        // });
     }
 
     addReadingTimeToSections() {
