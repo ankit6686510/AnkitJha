@@ -80,18 +80,34 @@ Visit **Ankit Jha's** professional portfolio: **[https://ankit6686510.github.io/
 ```
 AnkitJha-Portfolio/
 ├── index.html              # Main portfolio page
-├── style.css               # Modern CSS styling
-├── next-gen-styles.css     # Advanced styling features
-├── advanced-animations.css # Animation effects
-├── enhanced-ux.css         # User experience enhancements
-├── script.js               # Core JavaScript functionality
-├── next-gen-features.js    # Advanced features
-├── enhanced-ux.js          # UX improvements
-├── sitemap.xml             # SEO optimization
-├── robots.txt              # Search engine directives
 ├── manifest.json           # PWA configuration
-├── Resume.pdf              # Ankit Jha's professional resume
-└── assets/                 # Images and media files
+├── robots.txt              # Search engine directives
+├── sitemap.xml             # SEO optimization
+├── 404.html                # Custom 404 page
+├── assets/                 # Organized assets directory
+│   ├── images/
+│   │   ├── profile/        # Profile photos and personal images
+│   │   ├── projects/       # Project screenshots and demos
+│   │   ├── logos/          # Company and technology logos
+│   │   ├── backgrounds/    # Background images and graphics
+│   │   └── icons/          # Favicons and icons
+│   └── documents/          # PDF documents and resumes
+├── css/                    # Stylesheets directory
+│   ├── style.css           # Main CSS styling
+│   ├── next-gen-styles.css # Advanced styling features
+│   ├── advanced-animations.css # Animation effects
+│   ├── enhanced-ux.css     # User experience enhancements
+│   └── responsive.css      # Responsive design styles
+├── js/                     # JavaScript directory
+│   ├── script.js           # Core JavaScript functionality
+│   ├── next-gen-features.js # Advanced features
+│   ├── enhanced-ux.js      # UX improvements
+│   ├── advanced-animations.js # Animation scripts
+│   ├── sw.js               # Service worker for PWA
+│   └── contentLoader.js    # Dynamic content loading
+└── data/                   # JSON data files
+    ├── blogs.json          # Blog posts data
+    └── challenges.json     # Coding challenges data
 ```
 
 ## 🚀 Getting Started
