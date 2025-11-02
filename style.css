@@ -612,6 +612,46 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+/* Social Link Images (for LeetCode, Codeforces, etc.) */
+.social-link-image {
+    padding: 8px;
+}
+
+.social-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all var(--transition-normal);
+    filter: none;
+    opacity: 0.8;
+}
+
+.social-link-image:hover .social-icon-img {
+    opacity: 1;
+}
+
+/* Dark mode - only invert LeetCode logo (black logo) */
+.dark-theme .social-icon-img[src*="LeetCode"] {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.dark-theme .social-link-image:hover .social-icon-img[src*="LeetCode"] {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+/* Dark mode - Codeforces logo keeps original colors */
+.dark-theme .social-icon-img[src*="codeforces"] {
+    filter: none;
+    opacity: 0.9;
+}
+
+.dark-theme .social-link-image:hover .social-icon-img[src*="codeforces"] {
+    filter: none;
+    opacity: 1;
+}
+
 
 /* ===================================
    SECTION HEADERS
@@ -1265,6 +1305,112 @@ body {
 
 .project-card:hover .project-image img {
     transform: scale(1.05);
+}
+
+/* Image Carousel */
+.project-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.carousel-images img.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all var(--transition-fast);
+    z-index: 15;
+    font-size: 16px;
+}
+
+.project-card:hover .carousel-nav {
+    opacity: 1;
+}
+
+.carousel-nav:hover {
+    background: rgba(99, 102, 241, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+    left: var(--spacing-md);
+}
+
+.carousel-next {
+    right: var(--spacing-md);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-sm);
+    z-index: 15;
+}
+
+.carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    padding: 0;
+}
+
+.carousel-indicator.active {
+    background: var(--primary-color);
+    width: 24px;
+    border-radius: var(--radius-full);
+}
+
+.carousel-indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Hide carousel controls if only one image */
+.project-carousel[data-images="1"] .carousel-nav,
+.project-carousel[data-images="1"] .carousel-indicators {
+    display: none;
 }
 
 .project-overlay {
