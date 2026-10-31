@@ -734,6 +734,66 @@ body {
     margin-bottom: 0;
 }
 
+.about-journey {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.about-journey-label {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.about-journey-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.about-journey-step {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-width: 0;
+    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font: inherit;
+    font-weight: 600;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--border-light);
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.about-journey-step:hover,
+.about-journey-step.is-active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.about-journey-step:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.about-journey-number {
+    color: var(--text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+}
+
+.about-journey-detail {
+    min-height: 5.1em;
+    margin: var(--spacing-md) 0 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 /* Info Tabs */
 .about-info {
     background: var(--bg-primary);

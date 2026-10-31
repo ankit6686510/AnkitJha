@@ -170,7 +170,7 @@
                         <span>Get In Touch</span>
                         <i class="fas fa-paper-plane"></i>
                     </a>
-                    <a href="assets/documents/Resume.pdf" class="btn btn-outline" target="_blank">
+                    <a href="https://drive.google.com/file/d/1pfrjuQF5V6jjdkIPJ4zWXlDY94fxiQgB/view?usp=sharing" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
                         <span>Resume</span>
                         <i class="fas fa-download"></i>
                     </a>
@@ -214,12 +214,30 @@
                             from Guru Gobind Singh Indraprastha University, with a CGPA of 8.136/10.
                         </p>
                         <p>
-                            I coordinate enterprise payment initiatives from requirements gathering through implementation, UAT, production launch,
-                            and post-launch stabilization for merchants including Agoda, Traveloka, Accor, Rakuten, and HSBC.
+                            My work takes enterprise payment initiatives from the first requirements conversation through implementation, UAT, and a stable production launch.
                         </p>
+                        <div class="about-journey">
+                            <p class="about-journey-label">How I move a launch forward</p>
+                            <div class="about-journey-steps" id="about-journey-controls" role="group" aria-label="Stages of payment delivery" hidden>
+                                <button type="button" class="about-journey-step is-active" data-description="Turn merchant goals into technical scope, clear owners, milestones, and a practical UAT plan." aria-pressed="true">
+                                    <span class="about-journey-number">01</span>
+                                    <span>Align</span>
+                                </button>
+                                <button type="button" class="about-journey-step" data-description="Bring product, engineering, business, operations, and merchant teams together to validate flows and get the release ready." aria-pressed="false">
+                                    <span class="about-journey-number">02</span>
+                                    <span>Launch</span>
+                                </button>
+                                <button type="button" class="about-journey-step" data-description="Track issues through resolution, stabilize after go-live, and turn recurring gaps into better onboarding and processes." aria-pressed="false">
+                                    <span class="about-journey-number">03</span>
+                                    <span>Improve</span>
+                                </button>
+                            </div>
+                            <p class="about-journey-detail" id="about-journey-detail" aria-live="polite">
+                                Turn merchant goals into technical scope, clear owners, milestones, and a practical UAT plan.
+                            </p>
+                        </div>
                         <p>
-                            My work spans delivery tracking, risk and dependency management, stakeholder communication, production issue resolution,
-                            and process improvement across distributed teams.
+                            Recent merchant programs include Agoda, Traveloka, Accor, Rakuten, and HSBC.
                         </p>
                     </div>
                 </div>
@@ -765,8 +783,8 @@
                     </div>
                     
                     <div class="contact-resume">
-                        <a href="assets/documents/Resume.pdf" download class="btn btn-primary">
-                            <span>Download Resume</span>
+                        <a href="https://drive.google.com/file/d/1pfrjuQF5V6jjdkIPJ4zWXlDY94fxiQgB/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <span>View Latest Resume</span>
                             <i class="fas fa-download"></i>
                         </a>
                     </div>
@@ -1041,6 +1059,26 @@
         }
 
         // Tab switching functionality
+        const aboutJourneyControls = document.getElementById('about-journey-controls');
+        const aboutJourneyDetail = document.getElementById('about-journey-detail');
+        const aboutJourneySteps = document.querySelectorAll('.about-journey-step');
+
+        if (aboutJourneyControls && aboutJourneyDetail && aboutJourneySteps.length) {
+            aboutJourneySteps.forEach(step => {
+                step.addEventListener('click', () => {
+                    aboutJourneySteps.forEach(otherStep => {
+                        const isActive = otherStep === step;
+                        otherStep.classList.toggle('is-active', isActive);
+                        otherStep.setAttribute('aria-pressed', String(isActive));
+                    });
+
+                    aboutJourneyDetail.textContent = step.getAttribute('data-description');
+                });
+            });
+
+            aboutJourneyControls.hidden = false;
+        }
+
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
 
