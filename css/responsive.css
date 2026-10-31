@@ -159,7 +159,8 @@ html {
     }
     
     .info-tabs {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--spacing-xs);
     }
     
@@ -167,11 +168,14 @@ html {
         font-size: var(--font-size-xs);
         padding: var(--spacing-sm);
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
+        min-width: 0;
+        min-height: 44px;
+        text-align: center;
     }
     
     .tab-btn i {
-        margin-right: var(--spacing-xs);
+        margin-right: 0;
     }
     
     /* Skills mobile layout */
@@ -402,6 +406,18 @@ html {
     
     .hero-container {
         padding: 0 var(--spacing-lg);
+    }
+
+    .info-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tab-btn {
+        min-width: 0;
+        min-height: 44px;
+        justify-content: center;
+        white-space: normal;
     }
     
     .hero-actions {
@@ -879,7 +895,7 @@ textarea:focus {
 /* Responsive font scaling */
 @media screen and (min-width: 320px) {
     html {
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        font-size: 16px;
     }
 }
 

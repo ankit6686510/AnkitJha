@@ -90,18 +90,34 @@
 
 /* Dark Theme Variables */
 .dark-theme {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --bg-glass: rgba(15, 23, 42, 0.25);
+    color-scheme: dark;
+
+    --primary-color: #f2a083;
+    --primary-dark: #d97d66;
+    --secondary-color: #78c7c4;
+    --accent-color: #e6bc76;
+    --success-color: #75c99c;
+    --warning-color: #e9b96c;
+    --error-color: #ef8c85;
+
+    --bg-primary: #15191d;
+    --bg-secondary: #20262b;
+    --bg-tertiary: #2b3338;
+    --bg-glass: rgba(21, 25, 29, 0.88);
     
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #94a3b8;
-    --text-inverse: #0f172a;
+    --text-primary: #f4f4ef;
+    --text-secondary: #c2cbc7;
+    --text-tertiary: #97a39d;
+    --text-inverse: #171b1e;
     
-    --border-color: #334155;
-    --border-light: #475569;
+    --border-color: #3a4547;
+    --border-light: #303a3b;
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.24);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.28), 0 2px 4px -2px rgb(0 0 0 / 0.24);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.26);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.34), 0 8px 10px -6px rgb(0 0 0 / 0.28);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.48);
 }
 
 /* Base Styles */
@@ -151,7 +167,7 @@ body {
 }
 
 .dark-theme .navbar {
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(21, 25, 29, 0.88);
     border-bottom-color: var(--border-color);
 }
 
@@ -161,7 +177,7 @@ body {
 }
 
 .dark-theme .navbar.scrolled {
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(21, 25, 29, 0.96);
 }
 
 .nav-container {
@@ -316,15 +332,17 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 100%;
+        top: 4rem;
         left: 0;
         right: 0;
+        max-height: calc(100dvh - 4rem);
+        overflow-y: auto;
         background: var(--bg-primary);
         border-top: 1px solid var(--border-color);
         flex-direction: column;
         padding: var(--spacing-xl);
         gap: var(--spacing-lg);
-        transform: translateY(-100%);
+        transform: translateY(-0.5rem);
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-normal);
