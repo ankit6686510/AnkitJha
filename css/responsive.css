@@ -285,10 +285,16 @@ html {
     .project-card.featured {
         grid-column: span 1;
     }
+
+    .project-card {
+        min-width: 0;
+    }
     
     .project-image,
     .project-card.featured .project-image {
-        height: 200px;
+        height: auto;
+        min-height: 180px;
+        aspect-ratio: 16 / 10;
     }
     
     .project-content {
@@ -350,7 +356,12 @@ html {
     .form-group input,
     .form-group textarea {
         padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem;
-        font-size: var(--font-size-sm);
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        min-height: 144px;
     }
     
     .form-group i {
@@ -574,10 +585,6 @@ html {
 
 /* Safari iOS specific fixes */
 @supports (-webkit-appearance: none) {
-    .hero {
-        min-height: -webkit-fill-available;
-    }
-    
     input[type="email"],
     input[type="text"],
     textarea {

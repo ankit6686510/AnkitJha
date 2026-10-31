@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- Primary Meta Tags -->
     <title>Ankit Kumar Jha - Product Solution Engineer at Juspay</title>
@@ -127,11 +127,11 @@
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -792,14 +792,16 @@
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left" data-aos-delay="400">
-                    <form name="submit-to-google-sheet" id="contact-form">
+                    <form name="submit-to-google-sheet" id="contact-form" action="https://formsubmit.co/ankit6686510@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New portfolio contact message">
+                        <input type="hidden" name="_template" value="table">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" autocomplete="name" required>
                             <i class="fas fa-user"></i>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" autocomplete="email" required>
                             <i class="fas fa-envelope"></i>
                         </div>
                         
@@ -819,7 +821,7 @@
                         </button>
                     </form>
                     
-                    <div id="form-message"></div>
+                    <div id="form-message" role="status" aria-live="polite" aria-atomic="true"></div>
                 </div>
             </div>
         </div>
@@ -992,8 +994,10 @@
         const navMenu = document.getElementById('nav-menu');
 
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            const isOpen = hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
         });
 
         // Close mobile menu when clicking on a link
@@ -1001,6 +1005,8 @@
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.setAttribute('aria-label', 'Open navigation menu');
             });
         });
 
@@ -1145,38 +1151,84 @@
         const contactForm = document.getElementById('contact-form');
         const formMessage = document.getElementById('form-message');
 
-        // Google Sheets script URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbye1R6D4vjcKZigI7NZloJ_-wiw55awbhe4Hx-xii38fk-lSKykmnmCCwYUGwMk6ffxZg/exec';
+        const contactEndpoint = 'https://formsubmit.co/ajax/ankit6686510@gmail.com';
 
-        contactForm.addEventListener('submit', e => {
+        contactForm.addEventListener('submit', async e => {
             e.preventDefault();
-            
-            // Show loading state
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
             submitBtn.disabled = true;
-            
-            fetch(scriptURL, { 
-                method: 'POST', 
-                body: new FormData(contactForm) 
-            })
-            .then(response => {
+
+            const formData = new FormData(contactForm);
+            formData.set('_replyto', formData.get('email'));
+
+            try {
+                const response = await fetch(contactEndpoint, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { Accept: 'application/json' }
+                });
+                const contentType = response.headers.get('content-type') || '';
+
+                if (contentType.includes('text/html')) {
+                    const replyToField = document.createElement('input');
+                    replyToField.type = 'hidden';
+                    replyToField.name = '_replyto';
+                    replyToField.value = String(formData.get('email') || '');
+                    contactForm.append(replyToField);
+                    formMessage.textContent = 'Opening secure browser verification...';
+                    contactForm.submit();
+                    return;
+                }
+
+                let result;
+
+                try {
+                    result = await response.json();
+                } catch {
+                    throw new Error(`Mail service returned HTTP ${response.status}.`);
+                }
+
+                if (!response.ok || String(result.success).toLowerCase() !== 'true') {
+                    throw new Error(result.message || `Mail service returned HTTP ${response.status}.`);
+                }
+
                 formMessage.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.</div>';
                 contactForm.reset();
-            })
-            .catch(error => {
-                formMessage.innerHTML = '<div class="error-message"><i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again.</div>';
-            })
-            .finally(() => {
+            } catch (error) {
+                if (error instanceof TypeError) {
+                    const replyToField = document.createElement('input');
+                    replyToField.type = 'hidden';
+                    replyToField.name = '_replyto';
+                    replyToField.value = String(formData.get('email') || '');
+                    contactForm.append(replyToField);
+                    formMessage.textContent = 'Opening secure browser verification...';
+                    contactForm.submit();
+                    return;
+                }
+
+                const errorNotice = document.createElement('div');
+                const errorIcon = document.createElement('i');
+                const errorText = document.createElement('span');
+                const emailLink = document.createElement('a');
+
+                errorNotice.className = 'error-message';
+                errorIcon.className = 'fas fa-exclamation-circle';
+                errorText.textContent = `Message could not be sent${error instanceof Error ? `: ${error.message}` : '.'} Please email `;
+                emailLink.href = 'mailto:ankit6686510@gmail.com';
+                emailLink.textContent = 'ankit6686510@gmail.com';
+                errorNotice.append(errorIcon, errorText, emailLink);
+                formMessage.replaceChildren(errorNotice);
+            } finally {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-                
-                // Clear message after 5 seconds
+
                 setTimeout(() => {
                     formMessage.innerHTML = '';
-                }, 5000);
-            });
+                }, 8000);
+            }
         });
 
         // Smooth scrolling for anchor links

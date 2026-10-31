@@ -158,6 +158,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    padding-top: env(safe-area-inset-top, 0px);
     z-index: var(--z-fixed);
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
@@ -303,6 +304,14 @@ body {
 .hamburger {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
     cursor: pointer;
     padding: var(--spacing-sm);
     gap: 4px;
@@ -332,10 +341,10 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 4rem;
+        top: calc(4rem + env(safe-area-inset-top, 0px));
         left: 0;
         right: 0;
-        max-height: calc(100dvh - 4rem);
+        max-height: calc(100dvh - 4rem - env(safe-area-inset-top, 0px));
         overflow-y: auto;
         background: var(--bg-primary);
         border-top: 1px solid var(--border-color);
